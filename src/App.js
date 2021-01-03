@@ -8,6 +8,7 @@ class App extends Component {
     this.state = {
       items: [],
       currentItem: { name: "", id: Date.now() },
+      editItem: {},
     };
   }
   handleInput = (e) => {
@@ -33,6 +34,7 @@ class App extends Component {
         }
       }
     });
+    this.setState({ items: items });
   };
 
   deleteItem = (key) => {
